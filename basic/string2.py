@@ -8,6 +8,7 @@
 
 # Additional basic string exercises
 
+import re
 
 # D. verbing
 # Given a string, if its length is at least 3,
@@ -35,8 +36,7 @@ def verbing(s):
 # So 'This dinner is not that bad!' yields:
 # This dinner is good!
 def not_bad(s):
-    # +++your code here+++
-    return
+    return re.sub(r"not(\s*\w*)* bad", 'good', s)
 
 
 # F. front_back
