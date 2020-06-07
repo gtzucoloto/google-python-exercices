@@ -17,6 +17,8 @@ import re
 # add 'ly' instead.
 # If the string length is less than 3, leave it unchanged.
 # Return the resulting string.
+
+
 def verbing(s):
     if len(s) < 3:
         pass
@@ -53,6 +55,8 @@ def front_back(a, b):
 
 # Simple provided test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
+
+
 def test(got, expected):
     prefix = ' OK ' if got == expected else '  X '
     print(f'{prefix} got: {repr(got)} expected: {repr(expected)}')
