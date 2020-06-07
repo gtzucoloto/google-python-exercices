@@ -22,8 +22,7 @@
 # and last chars of the string are the same.
 # Note: python does not have a ++ operator, but += works.
 def match_ends(words):
-    # +++your code here+++
-    return
+    return len([w for w in words if len(w) >= 2 and w.endswith(w[:1])])
 
 
 # B. front_x
@@ -52,11 +51,8 @@ def sort_last(tuples):
 # Simple provided test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
 def test(got, expected):
-    if got == expected:
-        prefix = ' OK '
-    else:
-        prefix = '  X '
-    print('%s got: %s expected: %s' % (prefix, repr(got), repr(expected)))
+    prefix = ' OK ' if got == expected else '  X '
+    print(f'{prefix} got: {repr(got)} expected: {repr(expected)}')
 
 
 # Calls the above functions with interesting inputs.
