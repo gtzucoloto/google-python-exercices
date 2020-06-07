@@ -17,8 +17,13 @@
 # If the string length is less than 3, leave it unchanged.
 # Return the resulting string.
 def verbing(s):
-    # +++your code here+++
-    return
+    if len(s) < 3:
+        pass
+    elif s.endswith('ing'):
+        s += 'ly'
+    else:
+        s += 'ing'
+    return s
 
 
 # E. not_bad
@@ -49,11 +54,8 @@ def front_back(a, b):
 # Simple provided test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
 def test(got, expected):
-    if got == expected:
-        prefix = ' OK '
-    else:
-        prefix = '  X '
-    print('%s got: %s expected: %s' % (prefix, repr(got), repr(expected)))
+    prefix = ' OK ' if got == expected else '  X '
+    print(f'{prefix} got: {repr(got)} expected: {repr(expected)}')
 
 
 # main() calls the above functions with interesting inputs,
